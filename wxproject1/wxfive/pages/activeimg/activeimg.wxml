@@ -1,0 +1,13 @@
+<!--pages/music/music.wxml-->
+<view class='base'>
+  <view class='top' >
+    <block  wx:for="{{images}}" >
+    <swiper indicator-active-color='blue' indicator-dots='ture' autoplay='ture' interval='3000' >
+       <swiper-item>
+        <image src="{{item}}" class="tt"></image>
+      </swiper-item>
+    </swiper>
+      
+    </block>
+  </view>
+</view>

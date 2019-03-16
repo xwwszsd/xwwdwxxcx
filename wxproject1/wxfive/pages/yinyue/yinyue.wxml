@@ -1,0 +1,13 @@
+<!--pages/yinyue/yinyue.wxml-->
+<view class='base'>
+  <view class='top'>
+    
+  </view>
+  <view class='content'>
+  <view class='cell' bindtap='playmusic'>
+     <audio class='aucs' src="{{audioSrc}}" poster="{{audioPoster}}" name="{{audioName}}" author="{{audioAuthor}}" controls></audio>
+  </view>
+   
+  </view>
+  <view class='bottom'></view>
+</view>

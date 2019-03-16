@@ -1,0 +1,26 @@
+/* pages/before/before.wxss */
+.base{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(207, 242, 247);
+}
+.top{
+  width: 100%;
+  height: 20%;
+ 
+}
+.content{
+  width: 100%;
+  height: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: '楷体';
+  font-size: 65rpx;
+}
+.bootom{
+  width: 100%;
+  height: 20%;
+
+}

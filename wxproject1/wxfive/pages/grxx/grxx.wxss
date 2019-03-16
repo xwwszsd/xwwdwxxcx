@@ -1,0 +1,47 @@
+/* pages/grzx/grzx.wxss */
+.base{
+  width: 100%;
+  height: 100vh;
+}
+.top{
+  width: 100%;
+  height: 20%;
+  border: 1rpx solid red;
+}
+.imgdiv{
+  width: 100%;
+  height: 100%;
+}
+.imgcs{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  width: 100%;
+  height: 70%;
+  border: 1rpx solid red;
+  margin-top: 20rpx;
+}
+.cell{
+  width: 100%;
+  height: 100rpx;
+  border: 1rpx solid red;
+  display: flex;
+
+}
+.leftv{
+  width: 30%;
+  height: 100rpx;
+  border: 1rpx solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightv{
+  width: 70%;
+  height: 100rpx;
+  border: 1rpx solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

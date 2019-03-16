@@ -11,12 +11,7 @@
           <view class='logfont' bindtap='clicklogin'>
             <text class='logtxt' class='logfontsize'>登录</text>
           </view>
-          <view class='bein'>
-            <view class='serchitem'>
-              <image src='{{imgicon}}' class='serchicon'></image>
-              <input class='inputcss'></input>
-            </view>
-          </view>
+          
           <view class='zhuce' bindtap='clickzhuce'>
             <text>注册</text>
           </view> 
@@ -33,7 +28,59 @@
           </swiper-item>
         </block>
       </swiper>
-      </view>
+    </view>
     
+  </view>
+  <view class='content'>
+    <view class="ss">
+      <view class='concss'>
+        <image class='conimg' src='../img/new.png' class='cimg1' bindtap='news'></image>
+      </view>
+      <view>
+        新闻
+      </view>
+    </view>
+    <view class="ss">  
+      <view class='concss'>
+        <image class='conimg' src='../img/book.png' class='cimg1' bindtap='tushu'></image>
+      </view>
+      <view>
+        图书
+      </view>
+    </view>
+    <view class="ss">  
+      <view class='concss'>
+        <image class='conimg' src='../img/music.png' class='cimg1' bindtap='yinyue'></image>
+      </view>
+      <view>
+        音乐
+      </view>
+    </view>
+
+    <view class="ss">  
+      <view class='concss'>
+        <image class='conimg' src='../img/sport.png' class='cimg1' bindtap='yundong'></image>
+      </view>
+      <view>
+        运动
+      </view>
+    </view>
+
+    <view class="ss">  
+    <view class='concss'>
+      <image class='conimg' src='../img/weather.png' class='cimg1' bindtap='tianqi'></image>
+    </view>
+      <view>
+        天气
+      </view>
+    </view>
+    <view class="ss">  
+    <view class='concss'>
+      <image class='conimg' src='../img/video.png' class='cimg1' bindtap='shipin'></image>
+    </view>
+     <view>
+        视频
+      </view>
+    </view>
   </view>
 </view>

@@ -1,0 +1,47 @@
+<!--pages/one/one.wxml-->
+<view class='base'>
+  
+   
+   <view class='content'>
+      <view class='imgcss'>
+         <image class='bb' src='{{userInfo.simg}}'></image>
+      </view>
+       <view class='lowline1'></view>
+        <view class='textlist'>  
+          <view class='textlist1'>
+            <text>学生姓名：</text> 
+            <text>{{userInfo.stuname}}</text>         
+          </view>
+          <view class='textlist1'>
+            <text>学生学号：</text> 
+            <text>{{userInfo.stuid}}</text>         
+          </view>
+          <view class='textlist2'>
+            <text>性别：</text>
+            <text>{{userInfo.ssex}}</text>  
+          </view>
+          <view class='textlist3'>
+            <text>学生状态：</text>
+            <text>{{userInfo.state}}</text>  
+          </view>
+      </view>
+   </view>
+   <view class='lowline'></view>
+   <view class='content1' data-phon='{{userInfo.sphone}}' bindtap='callphone'>
+       <text>手机号码：</text>
+       <text>{{userInfo.sphone}}</text>
+   </view>
+   <view class='lowline'></view>
+
+   <view class='content2' id='myaudio' bindtap='clickaudio' data-eaudio='{{userInfo.smusic}}'>
+      
+       <audio poster="{{userInfo.simg}}" name="{{name}}" author="{{author}}" src="{{userInfo.smusic}}" id="myAudio" controls loop></audio>
+      
+   </view>
+   
+   <view class='lowline'></view>
+   <view class='content3'>
+       <video autoplay='' class='videocss' src='{{userInfo.svideo}}'></video>
+   </view>
+ 
+</view>

@@ -1,19 +1,64 @@
 {
   "pages": [
     "pages/main/main",
+    "pages/login/login",
+    "pages/tianqi/tianqi",
+    "pages/gly/gly",
+    
+    
+    
+    "pages/yinyue/yinyue",
+    "pages/tushu/tushu",
+    "pages/music/music",
+    "pages/before/before",
+    "pages/activeimg/activeimg",
+    "pages/email/email",
     "pages/zhuce/zhuce",
     "pages/userinfo/userinfo",
-    "pages/login/login",
-    
+    "pages/stuinfo/stuinfo",
     "pages/index/index",
     "pages/logs/logs",
-    
-    "pages/email/email"
+    "pages/news/news",
+    "pages/yundong/yundong",
+    "pages/shipin/shipin",
+    "pages/bjxx/bjxx",
+    "pages/grzx/grzx",
+    "pages/grxx/grxx",
+    "pages/glyym/glyym"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#DF3031",
+    "list": [
+      {
+        "pagePath": "pages/bjxx/bjxx",
+        "text": "班级信息",
+        "iconPath": "pages/img/bjxx.png",
+        "selectedIconPath": "pages/img/bjxx1.png"
+      },
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "pages/img/sy.png",
+        "selectedIconPath": "pages/img/sy1.png"
+      },
+      {
+        "pagePath": "pages/grzx/grzx",
+        "text": "个人中心",
+        "iconPath": "pages/img/grzx.png",
+        "selectedIconPath": "pages/img/grzx1.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
   }
 }

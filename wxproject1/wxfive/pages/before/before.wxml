@@ -1,0 +1,8 @@
+<!--pages/before/before.wxml-->
+<view class='base'>
+  <view class='top'></view>
+  <view class='content'>
+      {{text1}}
+  </view>
+  <view class='bootom'></view>
+</view>

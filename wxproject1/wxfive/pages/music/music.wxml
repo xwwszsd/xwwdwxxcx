@@ -1,0 +1,17 @@
+<!--pages/music/music.wxml-->
+<view class="base">
+   <view class="top">
+     音乐列表
+   </view>
+
+   <view class="listview">
+      <block  wx:for="{{musicdatas}}">
+        <view  class="itemview" bindtap='musicclick'  data-music="{{item.musurl}}">
+           <text>{{item.mucname}}</text>
+
+
+        </view>
+      </block>
+    </view>
+</view>
+

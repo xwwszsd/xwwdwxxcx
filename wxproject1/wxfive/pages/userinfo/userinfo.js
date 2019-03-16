@@ -6,58 +6,52 @@ Page({
    * 页面的初始数据
    */
   data: {
-    studata: []
+    studata: [],
+    uname:"",
+    uimg:"",
+    stuinfo:[],
+    username:"",
+    classname1:"",
+    la:"",
   },
 
-  btnclick: function (event) {
 
-    console.log("按钮被点击");
 
-    var that = this;
-
-    console.log("按钮点击name---->" + that.data.username);
-
-    //微信小程序点击向服务器端发起查询图片的请求
-    wx.request({
-      url: appserver.globalData.server +'/query',
-      data: { "username": that.data.username },  // username 是自己定义的
-      header: { "content-type": "application/json" },
-      success: function (response) {
-        console.log(response.data.userInfo);
-
-        var imgpath = response.data.userInfo;  //接收python 传来的值
-
-        that.setData({ userInfo: imgpath, flog: true })  //设置前台页面的值
-
-      }
-    });
-  },
-
-  nameinput: function (event) {
-    console.log(event);
-    console.log(event.detail.value);
-    var name = event.detail.value;
-
-    var that = this;
-    that.setData({ username: name })
-  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var that = this;
+    console.log(options.userinfo1);
+    var cname = options.userinfo1;
+    that.setData({ uname: cname});
+    
     wx.request({
-      url: appserver.globalData.server +'/stulist',
-      method: "GET",
+      url: appserver.globalData.server + '/serchsc',
+      data: { "stuname": that.data.uname },
       header: { "content-type": "application/json" },
-      success: function (response) {
-        console.log(response);
-        that.setData({ studata: response.data.studatas })
+      success: function (res) {
+        console.log(res.data.stuinfo);
+        console.log(res.data.stuimg);
+        console.log(res.data.classname);
+        that.setData({ stuinfo: res.data.stuinfo });
+        that.setData({ classname1: res.data.classname });
+        that.setData({ uimg: res.data.stuimg });
+        that.setData({ la: res.data.la });
       }
     })
-  },
+    
 
+   
+  },
+  lookall: function (event) {
+    console.log(event.currentTarget.dataset.stuname);
+    var stuname = event.currentTarget.dataset.stuname;
+    wx.navigateTo({
+      url: '../stuinfo/stuinfo?uerall=' + stuname,
+    })
+  },
   clickphone: function (event) {
 
     console.log(event.currentTarget.dataset.phone);

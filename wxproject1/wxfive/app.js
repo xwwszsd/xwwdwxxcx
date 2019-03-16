@@ -2,6 +2,7 @@
 
 App({
  
+ 
 
   onLaunch: function () {
     // 展示本地存储能力
@@ -13,6 +14,8 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
+       
+      
       }
     })
     // 获取用户信息
@@ -38,8 +41,9 @@ App({
   },
   globalData: {
     userInfo: null,
-    server:"http://d7g5b9.natappfree.cc"
-  }
-  
+    server:"http://z2257g.natappfree.cc",
+    cate_id:""
+  },
+ 
   
 })

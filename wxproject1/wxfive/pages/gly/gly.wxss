@@ -1,0 +1,30 @@
+/* pages/gly/gly.wxss */
+.base{
+  width: 100%;
+  height: 100vh;
+  
+}
+.top{
+  width: 100%;
+  height: 50rpx;
+  background-color: wheat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35rpx;
+  font-family: '楷体';
+}
+.content{
+  width: 100%;
+  height: 80%;
+  border: 1rpx solid red;
+  
+  
+}
+.vbtn{
+  width: 260rpx;
+}
+.btn1{
+  width: 260rpx;
+  
+}

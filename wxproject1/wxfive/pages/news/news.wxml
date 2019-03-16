@@ -1,0 +1,35 @@
+<!--pages/juhe1/juhe1.wxml-->
+<view class='top'>
+   <swiper indicator-dots='true' autoplay='true' indicator-active-color='blue' interval='3000' duration='3000' class='aa'>
+      <block wx:for="{{imgdatas}}">
+         <swiper-item>
+            <image src='{{item.thumbnail_pic_s}}' class='nimg'></image>
+         </swiper-item>
+      </block>
+   </swiper>
+</view>
+<view class='listview'>
+   <block wx:for="{{imgdatas}}">
+         <!--所有新闻列表 start-->
+         <view class='newsview'>
+            <!--新闻图片 start-->
+            <view class='newimg'>
+               <image src='{{item.thumbnail_pic_s}}' class='bb'></image>
+            </view>           
+            <!--新闻图片 end-->
+            <!--新闻信息 start-->
+            <view class='newinfo'>
+              <view class='newtitle'>
+                 <text>{{item.title}}</text>
+              </view>
+              <view class='newitem'>
+                 <text>{{item.author_name}}</text>
+                 <text>{{item.date}}</text>
+              </view>
+            </view>
+            <!--新闻信息 end-->
+         </view>
+            
+         <!--所有新闻列表 end-->
+   </block>
+</view>

@@ -1,28 +1,37 @@
 <!--pages/zhuce/zhuce.wxml-->
 <view class='base'>
-  <view class='top'></view>
-    <form bindsubmit='' bindreset=''></form>
+  <view class='top'>
+    <view class='uploadview' >
+      <image src='{{imgpath}}' class='upimgcss' ></image>
+    </view>
+  </view>
+   
       <view class='zhuceview'>
         <view class='zcinputview'>
-          <view class='stuidview'><text class='txtcss'>学生ID：</text><input class='cell'></input></view> 
-          <view class='nameview'><text class='txtcss'>学生姓名：</text><input class='cell'></input></view>
-          <view class='pwdview'><text class='txtcss'>密码：</text><input class='cell'></input></view>
+           <view class='nameview'><text class='txtcss'>学生姓名：</text><input class='cell' bindblur='lostfouce' bindinput='checkonly1'></input><view class='panduan'><image src='{{valueimg}}'></image></view></view>
+
+          <view class='stuidview'><text class='txtcss'>学生ID：</text><input class='cell'  bindinput='checkonly'></input><view class='panduan'><image src='{{valueimg1}}'></image></view></view> 
+
+          <view class='pwdview'><text class='txtcss'>密码：</text><input class='cell'  password='password' bindinput='checkonly2'></input><view class='panduan'><image src='{{valueimg2}}'></image></view></view>
           
           <view class="zcsexview">
             <view class="sexview">性别：</view>
-              <view class='radiosex'>
-                <radio-group name="sex">
-                  
-                    <label class='labelcss'>
-                      <radio value="男" checked/>男</label>
-                    <label class='labelcss'>
-                      <radio value="女" />女</label>
+              <view class='radiosex'>                  
+                <radio-group class="radio-group" bindchange="radioChange">
+                  <label class="radio" >
+                     <radio value="男" />男
+                  </label>
+                  <label class="radio" >
+                     <radio value="女" />女
+                  </label>
                 </radio-group>
+                
               </view>
           </view>
           <view class="btnsub">
-            <button formType="submit" class='a'>提交</button>
-            <button formType="reset"class='a'>重置</button>
+            <button class='b' bindtap='uploadimg'>上传图片</button>
+            <button formType="submit" class='a' type='primary' bindtap='submitinfo'>提交</button>
+            <button formType="reset"class='a' type='primary' bindtap='resetinfo'>重置</button>  
           </view>
                                                                                                       
         </view>

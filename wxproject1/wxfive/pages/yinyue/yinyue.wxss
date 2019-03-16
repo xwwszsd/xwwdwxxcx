@@ -1,0 +1,29 @@
+/* pages/yinyue/yinyue.wxss */
+.base{
+  width: 100%;
+  height: 100vh;
+ 
+
+}
+.top{
+  width: 100%;
+  height: 30%;
+  
+  background-image: url("http://5b0988e595225.cdn.sohucs.com/images/20170915/cf133bff77ad4767b29759acc6289d21.jpeg");
+  background-size: 100% 100%;
+}
+.content{
+  width: 100%;
+  height: 70%;
+   background: url("http://pic65.nipic.com/file/20150429/2531170_102647308000_2.jpg");
+ background-size: 100% 100%;
+ background-repeat: no-repeat;
+}
+.cell{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1rpx solid rgb(171, 169, 173);
+}

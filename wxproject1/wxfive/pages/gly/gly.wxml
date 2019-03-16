@@ -1,0 +1,13 @@
+<!--pages/gly/gly.wxml-->
+<view class='base'>
+  <view class='top'>
+    <text>信息中心</text>
+  </view>
+  <view class='content'>
+    <view class='vbtn'>
+      <button  class='btn1'>班级信息</button>
+      <button  class='btn1'>班级信息</button>
+      <button  class='btn1'>班级信息</button>
+    </view>
+  </view>
+</view>

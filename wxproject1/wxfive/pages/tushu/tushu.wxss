@@ -1,0 +1,63 @@
+/* pages/tushu/tushu.wxss */
+.base{
+  width: 100%;
+  height: 100vh;
+}
+.top{
+  width: 100%;
+  height: 30%;
+ 
+}
+.topview{
+  width: 100%;
+  height: 100%;
+}
+.topimgcs{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  width: 100%;
+  height: 70%;
+ 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
+}
+.cell{
+  width: 220rpx;
+  height: 220rpx;
+  border: 5rpx solid rgb(76, 164, 247);
+  border-radius: 15rpx;
+  margin: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item{
+   width: 200rpx;
+  height: 220rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.conview{
+  width: 200rpx;
+  height: 160rpx;
+}
+.conimgcs{
+  width: 100%;
+  height: 100%;
+}
+.conwz{
+  width: 100%;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10rpx;
+}
+

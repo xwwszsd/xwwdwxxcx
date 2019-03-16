@@ -1,0 +1,54 @@
+/* pages/juhe1/juhe1.wxss */
+.top{
+  width: 100%;
+  height: 450rpx;
+}
+.aa{
+  width: 100%;
+  height: 100%;
+}
+.nimg{
+  width: 100%;
+  height: 100%;
+}
+.listview{
+  width: 100%;
+  height: 3000rpx;
+}
+.newsview{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+}
+.newimg{
+  width: 150rpx;
+  height: 120rpx;
+}
+.newinfo{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   font-family: 楷体;
+}
+.newtitle{
+  width: 100%;
+  height: 60%;
+  margin: 10rpx;
+  margin-top: 10rpx;
+  /*border: 1rpx solid rebeccapurple;*/
+
+}
+
+.newitem{
+  width: 100%;
+  height: 40%;
+  margin: 10rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.bb{
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,16 @@
+<!--pages/tushu/tushu.wxml-->
+
+<view class='base'>
+  <view class="top">
+    <view class='topview'><image src='../img/dushu.jpg' class='topimgcs'></image></view>
+  </view>
+  <view class="content">
+    <view class='cell' wx:for='{{tushuinfo}}'>
+      <view class='item'>
+        <view class='conview'><image src='{{item.timg}}' class='conimgcs'></image></view>
+        <view class='conwz'>{{item.tname}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="bottom"></view>
+</view>

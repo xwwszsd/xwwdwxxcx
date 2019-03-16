@@ -1,0 +1,25 @@
+<!--pages/grzx/grzx.wxml-->
+<view class='base'>
+  <view class='top'>
+    <view class='imgdiv'><image src='../img/nkj.png' class='imgcs'></image></view>
+  </view>
+  <view class='content'>
+    <view class='cell'>
+      <view class='leftv'>姓名：</view>
+      <view class='rightv'><text>{{querygr.sname}}</text></view>
+    </view>
+    <view class='cell'>
+      <view class='leftv'>性别：</view>
+      <view class='rightv'><text>{{querygr.ssex}}</text></view>
+    </view>
+    <view class='cell'>
+      <view class='leftv'>年龄：</view>
+      <view class='rightv'><text>{{querygr.snl}}</text></view>
+    </view>
+    <view class='cell'>
+      <view class='leftv'>班级：</view>
+      <view class='rightv'><text>{{querybj}}</text></view>
+    </view>
+  </view>
+  <view class='bottom'></view>
+</view>

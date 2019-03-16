@@ -12,9 +12,26 @@ Page({
     username: "",
     pwd: "",
     code: "",
-    fanhui:""
-
+    fanhui:"",
+    sta:"1",
+    select: false,//控制下拉列表的显示隐藏，false隐藏、true显示
+    
+    index: 0//选择的下拉列表下标
   },
+  bindShowMsg() {
+    this.setData({
+      select: !this.data.select
+    })
+  },
+  mySelect(e) {
+    var name = e.currentTarget.dataset.name
+    this.setData({
+      tihuoWay: name,
+      select: false
+    })
+  },
+
+
   restcode: function (event) {
     var that = this;
     wx.request({
@@ -34,6 +51,12 @@ Page({
       }
     })
 
+  },
+  xzry(eve){
+    console.log(eve);
+    this.setData({
+      show: !this.data.show
+    })
   },
   inputname: function (event) {
     console.log(event.detail.value);
@@ -65,7 +88,7 @@ Page({
     if (logincode == codevalue) {
       wx.request({
         url: app.globalData.server + '/checkLogin',
-        data: { "username": that.data.username, "pwd": that.data.pwd },
+        data: { "username": that.data.username, "pwd": that.data.pwd,"sta":that.data.sta },
         header: { "content-type": "application/json" },
         success: function (resp) {
           var uname = that.data.username;
@@ -74,15 +97,28 @@ Page({
           var result = resp.data.checkflog;
           if (result == "None") {
             console.log("你输入的用户名或密码不正确!");
-            that.setData({ fanhui: "你输入的用户名或密码不正确!" })
+            that.setData({ fanhui: "你输入的用户名或密码不正确!" });
+            
           }
           else if (result == "0") {
             console.log("你的状态不对！");
-            that.setData({ fanhui: "你的状态不对！" })
+            that.setData({ fanhui: "你的状态不对！" });
+          
+          }
+          else if (result == "2"){
+            wx.navigateTo({
+              url: '../gly/gly?userinfo1=' + uname,
+            })
           }
           else {
-            wx.navigateTo({
-              url: '../userinfo/userinfo?userinfo=' + uname,
+            that.setData({sta:"1"});
+            
+            var cate_id = uname;
+            console.log("cate_id" + cate_id);
+            app.globalData.cate_id = cate_id;//设置全局变量(app已经定义 var app=getApp())
+            wx.switchTab({
+              
+              url: '../main/main?userinfo1=' + uname,
             })
           }
 
@@ -93,6 +129,9 @@ Page({
     else {
       console.log("验证码错误");
       that.setData({ fanhui: "验证码错误!" });
+      
+    
+     
     }
 
   },
@@ -119,6 +158,7 @@ Page({
       }
     })
 
+  
   },
 
   /**
